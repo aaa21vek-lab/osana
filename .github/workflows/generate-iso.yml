@@ -1,0 +1,28 @@
+name: Generate ISO
+on:
+  workflow_dispatch:
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build ISO
+        uses: blue-build/github-action@v1
+        with:
+          recipe: recipes/recipe.yml
+          # Магический флаг, который превращает билд в ISO
+          build_opts: "--iso"
+          pr_event_number: ${{ github.event.number }}
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: OsANA-ISO
+          path: ./output/*.iso

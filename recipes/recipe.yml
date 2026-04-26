@@ -9,6 +9,10 @@ modules:
       - tor
       - macchanger
       - git
+  - type: files
+    files:
+      - source: config/backgrounds/
+        destination: /usr/share/backgrounds/osana/
   - type: default-flatpaks
     notify: true
     install:

@@ -17,3 +17,6 @@ modules:
     notify: true
     install:
       - org.gnome.TextEditor
+  - type: script
+    scripts:
+      - set-wallpaper.sh

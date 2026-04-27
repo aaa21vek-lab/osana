@@ -19,6 +19,6 @@ modules:
         destination: /usr/share/glib-2.0/schemas/10-osana-wallpaper.gschema.override
 
   - type: flatpaks
-    image: # ДОБАВЛЕНО: теперь это обязательный уровень для системной установки
+    system:
       install:
         - org.gnome.TextEditor

@@ -10,6 +10,7 @@ modules:
       - tor
       - macchanger
       - git
+      - gnome-text-editor # Тот же редактор, но без мучений с Flatpak
 
   - type: files
     files:
@@ -17,8 +18,3 @@ modules:
         destination: /usr/share/backgrounds/osana/
       - source: config/schema/10-osana-wallpaper.gschema.override
         destination: /usr/share/glib-2.0/schemas/10-osana-wallpaper.gschema.override
-
-  - type: flatpaks
-    system:
-      install:
-        - org.gnome.TextEditor

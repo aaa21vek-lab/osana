@@ -2,7 +2,7 @@
 name: osana
 description: My custom OS based on Fedora
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40
+image-version: latest # Используем самый свежий тег
 
 modules:
   - type: rpm-ostree
@@ -10,7 +10,7 @@ modules:
       - tor
       - macchanger
       - git
-      - gnome-text-editor # Тот же редактор, но без мучений с Flatpak
+      - gnome-text-editor
 
   - type: files
     files:

@@ -2,7 +2,7 @@
 name: osana
 description: My custom OS based on Fedora
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40 # ИСПРАВЛЕНО: раньше было fedora-version
+image-version: 40
 
 modules:
   - type: rpm-ostree
@@ -15,9 +15,9 @@ modules:
     files:
       - source: config/backgrounds/
         destination: /usr/share/backgrounds/osana/
+      - source: config/schema/10-osana-wallpaper.gschema.override
+        destination: /usr/share/glib-2.0/schemas/10-osana-wallpaper.gschema.override
 
-  - type: flatpaks # ИСПРАВЛЕНО: используем стандартный модуль вместо default-flatpaks
+  - type: flatpaks
     install:
       - org.gnome.TextEditor
-
-  - type: script

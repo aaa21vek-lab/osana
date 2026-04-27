@@ -21,5 +21,3 @@ modules:
       - org.gnome.TextEditor
 
   - type: script
-    scripts:
-      - set-wallpaper.sh

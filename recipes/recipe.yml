@@ -14,7 +14,7 @@ modules:
 
   - type: files
     files:
-      - source: config/backgrounds/osana_ocean_1.jpg # Укажи точное имя файла
-        destination: /usr/share/backgrounds/osana/osana_ocean_1.jpg
+      - source: config/backgrounds # Указываем папку целиком без слеша в конце
+        destination: /usr/share/backgrounds/osana
       - source: config/schema/10-osana-wallpaper.gschema.override
         destination: /usr/share/glib-2.0/schemas/10-osana-wallpaper.gschema.override

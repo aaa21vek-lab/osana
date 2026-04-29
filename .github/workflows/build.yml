@@ -1,5 +1,9 @@
 name: bluebuild
 on:
+  permissions:
+    contents: read
+    packages: write
+    id-token: write
   push:
     paths-ignore: [ "**.md" ]
   workflow_dispatch:

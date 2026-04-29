@@ -2,7 +2,7 @@
 name: osana
 description: My custom OS based on Fedora
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # Используем самый свежий тег
+image-version: 40 # Рекомендую поставить число для стабильности ISO
 
 modules:
   - type: rpm-ostree
@@ -14,7 +14,8 @@ modules:
 
   - type: files
     files:
-      - source: config/backgrounds # Указываем папку целиком без слеша в конце
+      # Указываем пути относительно папки 'files' в твоем репозитории
+      - source: config/backgrounds 
         destination: /usr/share/backgrounds/osana
       - source: config/schema/10-osana-wallpaper.gschema.override
         destination: /usr/share/glib-2.0/schemas/10-osana-wallpaper.gschema.override
